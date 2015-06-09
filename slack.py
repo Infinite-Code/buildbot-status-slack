@@ -70,11 +70,11 @@ class SlackStatusPush(StatusReceiverMultiService):
                 self.localhost_replace))
 
         source_stamps = build.getSourceStamps()
-        branch_names = ', '.join([source_stamp.branch for source_stamp in source_stamps])
-        repositories = ', '.join([source_stamp.repository for source_stamp in source_stamps])
+        branch_names = ', '.join([str(source_stamp.branch) for source_stamp in source_stamps])
+        repositories = ', '.join([str(source_stamp.repository) for source_stamp in source_stamps])
         responsible_users = ', '.join(build.getResponsibleUsers())
-        revision = ', '.join([source_stamp.revision for source_stamp in source_stamps])
-        project = ', '.join([source_stamp.project for source_stamp in source_stamps])
+        revision = ', '.join([str(source_stamp.revision) for source_stamp in source_stamps])
+        project = ', '.join([str(source_stamp.project) for source_stamp in source_stamps])
 
         if result == SUCCESS:
             status = "Success"
