@@ -17,6 +17,14 @@ pip install -e git+https://github.com/mindmatters/buildbot-status-slack#egg=slac
 
 Copy slack.py next to your master.cfg file
 
+## Dependencies
+
+This plugin depends on requests library, please install it for your buildbot setup.
+
+```
+pip install requests
+```
+
 
 ## Setup
 
